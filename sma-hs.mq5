@@ -1,6 +1,5 @@
 #import "sma-hs.dll"
 void hs_begin();
-void hs_end();
 void sma(int period, double &dst[], const double &src[], int len);
 #import
 
@@ -25,11 +24,6 @@ int OnInit()
     SetIndexBuffer(0, sma_line, INDICATOR_DATA);
 
     return INIT_SUCCEEDED;
-}
-
-void OnDeinit(const int reason)
-{
-    //hs_end();
 }
 
 int OnCalculate(

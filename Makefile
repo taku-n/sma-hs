@@ -7,7 +7,9 @@ sma-hs.ex5: sma-hs.mq5
 	cat log.log
 	rm log.log
 
-sma-hs.dll:
+sma-hs.dll: SMAHs.hs begin.c
+	stack ghc -- -shared -o sma-hs.dll SMAHs.hs begin.c
 
 clean:
-	rm sma-hs.ex5
+	-rm sma-hs.ex5
+	-rm sma-hs.dll

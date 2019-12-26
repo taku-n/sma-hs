@@ -8,8 +8,3 @@ void hs_begin()
     char **args = argv;
     hs_init(&argc, &args);
 }
-
-void hs_end()
-{
-    hs_exit();
-}
